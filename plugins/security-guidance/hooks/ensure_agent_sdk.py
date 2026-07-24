@@ -529,7 +529,7 @@ def main() -> tuple[int, str, str]:
         we_own_sentinel = True
         err_phase = "venv"
         subprocess.run(
-            [sys.executable, "-m", "venv", "--clear", str(venv)],
+            [sys.executable, "-P", "-m", "venv", "--clear", str(venv)],
             capture_output=True, timeout=60, check=True,
         )
         # Some machines route pip through a private registry; we
